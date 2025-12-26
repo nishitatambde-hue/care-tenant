@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import SetupPage from "./pages/Setup";
 import PatientsPage from "./pages/Patients";
 import OPDQueuePage from "./pages/OPDQueue";
+import AppointmentsPage from "./pages/Appointments";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,7 +28,7 @@ const App = () => (
             <Route path="/setup" element={<SetupPage />} />
             <Route path="/dashboard" element={<DashboardLayout><Dashboard /></DashboardLayout>} />
             <Route path="/patients" element={<DashboardLayout><PatientsPage /></DashboardLayout>} />
-            <Route path="/appointments" element={<DashboardLayout><div className="text-xl font-semibold">Appointments Module</div></DashboardLayout>} />
+            <Route path="/appointments" element={<DashboardLayout><AppointmentsPage /></DashboardLayout>} />
             <Route path="/opd-queue" element={<DashboardLayout><OPDQueuePage /></DashboardLayout>} />
             <Route path="/consultations" element={<DashboardLayout><div className="text-xl font-semibold">Consultations Module</div></DashboardLayout>} />
             <Route path="/vitals" element={<DashboardLayout><div className="text-xl font-semibold">Vitals Module</div></DashboardLayout>} />

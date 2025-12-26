@@ -7,6 +7,9 @@ import { AuthProvider } from "@/hooks/useAuth";
 import { DashboardLayout } from "@/components/layout/DashboardLayout";
 import AuthPage from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
+import SetupPage from "./pages/Setup";
+import PatientsPage from "./pages/Patients";
+import OPDQueuePage from "./pages/OPDQueue";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,10 +24,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/auth" element={<AuthPage />} />
+            <Route path="/setup" element={<SetupPage />} />
             <Route path="/dashboard" element={<DashboardLayout><Dashboard /></DashboardLayout>} />
-            <Route path="/patients" element={<DashboardLayout><div className="text-xl font-semibold">Patients Module</div></DashboardLayout>} />
+            <Route path="/patients" element={<DashboardLayout><PatientsPage /></DashboardLayout>} />
             <Route path="/appointments" element={<DashboardLayout><div className="text-xl font-semibold">Appointments Module</div></DashboardLayout>} />
-            <Route path="/opd-queue" element={<DashboardLayout><div className="text-xl font-semibold">OPD Queue Module</div></DashboardLayout>} />
+            <Route path="/opd-queue" element={<DashboardLayout><OPDQueuePage /></DashboardLayout>} />
             <Route path="/consultations" element={<DashboardLayout><div className="text-xl font-semibold">Consultations Module</div></DashboardLayout>} />
             <Route path="/vitals" element={<DashboardLayout><div className="text-xl font-semibold">Vitals Module</div></DashboardLayout>} />
             <Route path="/lab-orders" element={<DashboardLayout><div className="text-xl font-semibold">Lab Orders Module</div></DashboardLayout>} />
